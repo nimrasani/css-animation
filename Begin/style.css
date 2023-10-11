@@ -5,21 +5,40 @@
 h1 {
   color: #433F55;
   font-family: 'Fira Mono', monospace;
-  overflow: hidden; 
-  border-right: .15em solid #CE2D4F; 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .15em; 
+  overflow: hidden;
+  border-right: .15em solid #CE2D4F;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+
+  /* animation-name: typing;
+  animation-duration: 3s;
+  animation-timing-function: steps(14); */
+  animation: typing 3s steps(14), blinking 0.5s steps(1) infinite;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
 }
 
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
 
 @keyframes blinking {
-  0%, 100% {
+
+  0%,
+  100% {
     border-color: transparent;
   }
+
   50% {
     border-color: #CE2D4F;
-    }
+  }
 }
 
 
@@ -27,6 +46,5 @@ body {
   padding-top: 5em;
   background: #cfcfcf;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
-
