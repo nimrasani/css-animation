@@ -1,35 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&display=swap');
 
-
+:root {
+  --dist: 0%;
+  --scale: 2;
+  --deg: 10deg;
+  --dur: 2s;
+  --delay: 0s;
+  --ease: linear;
+}
 
 
 p {
-  animation: moveIn 2s linear both;
-  margin:0.75rem 0;
+  /* animation: moveIn 2s linear both; */
+  animation: moveIn var(--dur) var(--delay) var(--ease) both;
+  margin: 0.75rem 0;
 }
 
 @keyframes moveIn {
   0% {
     transform: translateX(-325%) scale(1) rotate(0deg);
   }
+
   100% {
-    transform: translateX(500px) scale(1.5)rotate(10deg);
+    transform: translateX(var(--dist)) scale(var(--scale))rotate(var(--deg));
   }
 }
 
-p:nth-of-type(1) { 
+p:nth-of-type(1) {
+  --scale: 1.75;
+  --deg: 5deg;
+  --dist: 80%;
+  --dur: 1.9s;
+  --ease: cubic-bezier(.22, 1, 0.36, 1);
   color: white;
 }
 
 p:nth-of-type(2) {
+  --scale: 1.5;
+  --dist: 30%;
+  --delay: 0.5s;
+  --ease: cubic-bezier(.34, 1.56, .64, 1);
   color: #59C3C3;
 }
 
 p:nth-of-type(3) {
+  --deg: -5deg;
+  --dist: 100%;
+  --ease: cubic-bezier(.25, 1, .5, 1);
   color: #fbacbe;
 }
 
 p:nth-of-type(4) {
+  --scale: 1.9;
+  --deg: 15deg;
+  --ease: cubic-bezier(.7, 0, .84, 0);
   color: #DCF2B0;
 }
 
@@ -37,12 +61,10 @@ body {
   background: #433F55;
   color: white;
   font-family: 'Fira Sans', sans-serif;
-  font-size:3.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   padding-top: 8rem;
-  display:flex;
+  display: flex;
   justify-content: center;
-  overflow:hidden;
+  overflow: hidden;
 }
-
-
