@@ -1,11 +1,13 @@
 .sticker {
   animation: rotate 10s linear infinite;
+  animation-play-state: paused;
+}
+
+.sticker:hover {
+  animation-play-state: running;
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
   100% {
     transform: rotate(360deg);
   }
@@ -15,10 +17,10 @@
 body {
   display: flex;
   justify-content: center;
-  margin-top:10em;
-  background:#ce2d4f;
+  margin-top: 10em;
+  background: #ce2d4f;
 }
 
 img {
-  width:200px;
+  width: 200px;
 }
