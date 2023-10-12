@@ -1,33 +1,59 @@
-
 .cloud01 {
-
+  animation: clouds 25s linear infinite;
 }
 
 .cloud02 {
-  
+  animation: clouds 30s 5s linear infinite backwards;
+}
+
+@keyframes clouds {
+
+  0% {
+    transform: translateX(-180px);
+  }
+
+  100% {
+    transform: translateX(800px);
+  }
+
 }
 
 
 /* Other styles  */
 
 body {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 .wrap {
   width: 800px;
   height: 650px;
   overflow: hidden;
-  position:relative;
+  position: relative;
 }
 
-.city, .cloud {position:absolute;}
+.city,
+.cloud {
+  position: absolute;
+}
 
-.city {z-index:100;}
+.city {
+  z-index: 100;
+}
 
-.cloud02 {top:76px;}
-.cloud01 {top:30px;}
+.cloud02 {
+  top: 76px;
+}
 
-img.cloud {width:150px;}
-.city img {width: 100%;}
+.cloud01 {
+  top: 30px;
+}
+
+img.cloud {
+  width: 150px;
+}
+
+.city img {
+  width: 100%;
+}
