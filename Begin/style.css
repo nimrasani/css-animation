@@ -1,6 +1,17 @@
 .bot {
   width:100px;
   offset-path: path('M.542,219.99c540.71,0,477.005-218.911,277.995-218.37S7.081,219.99,539.573,219.99');
+  animation: fly 9s cubic-bezier(.22,0,.76,1) both;
+  offset-rotate: auto 45deg;
+}
+
+@keyframes fly {
+  0%{
+    offset-distance: 0%;
+  }
+  100%{
+    offset-distance: 100%
+  }
 }
 
 /* other styles */
